@@ -7,6 +7,8 @@ client = bigquery.Client()
 
 
 @app.route("/")
+
+
 def main(big_query_client=client):
     table_id = "YOUR_PROJECT_ID.test_schema.us_states"
     job_config = bigquery.LoadJobConfig(
