@@ -6,6 +6,9 @@ app = Flask(__name__)
 client = bigquery.Client()
 
 
+
+
+
 @app.route("/")
 
 
