@@ -18,13 +18,13 @@ steps:
         "us-central1-docker.pkg.dev/$PROJECT_ID/python-apps/demo-flask-app:$COMMIT_SHA",
       ]
 
-  # Step 3: Run tests inside the built container
+# Step 3: Run tests inside the built container
   - name: "us-central1-docker.pkg.dev/$PROJECT_ID/python-apps/demo-flask-app:$COMMIT_SHA"
     entrypoint: "bash"
     args:
       - "-c"
       - |
-        python -m pytest
+        python -m pytest Section3-CloudBuild-CICD/cloudrun-app-cloudbuild/application-files/test_main.py
 
   # Step 4: Deploy to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
