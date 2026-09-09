@@ -1,6 +1,7 @@
 steps:
-  # Step 1: Build the Docker image
+# Step 1: Build the Docker image
   - name: "gcr.io/cloud-builders/docker"
+    dir: "Section3-CloudBuild-CICD/cloudrun-app-cloudbuild/application-files"
     args:
       [
         "build",
